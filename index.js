@@ -2,12 +2,15 @@ let userLetter = prompt("Enter a letter: ")
 
 function checkUserNameLetterMatch(userLetter){ 
     users.filter(function(user){
-
         if(user.name.includes(userLetter)) {
-           return console.log(`Hello ${user.name}`);
+           return user;
         }
+    }).map(function (user){
+        
+        return user.name
     })
 }
+
 
 setInterval(function() { checkUserNameLetterMatch(userLetter)
 }, 2000);
